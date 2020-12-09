@@ -24,9 +24,11 @@ public class MyTest extends BaseTest {
                 .rememberPrice()
                 .clickBuyButton()
                 .checkCart()
-                .clickCartButton();
-        //Thread.sleep(3000);
-        Product.listOfProducts.forEach(l->System.out.println(l.getPrice()));
+                .clickCartButton()
+                .checkWarranty("playstation", "24")
+                .checkProductsPriceAndPriceOfCart();
+        Thread.sleep(3000);
+        Product.listOfProducts.forEach(l->System.out.println(l.getName()));
 
 
 
@@ -90,7 +92,7 @@ public class MyTest extends BaseTest {
         String cartButtonXpath = "//a[@class='ui-link cart-link']";
         WebElement cartButton = driver.findElement(By.xpath(cartButtonXpath));
         cartButton.click();
-
+//-----------------------------------------------------------------------------------
         //проверка гарантии
         String checkWarrantyXPath = "//div[@data-commerce-target='basket_additional_warranty_24']/span";
         WebElement checkWarranty = driver.findElement(By.xpath(checkWarrantyXPath));
