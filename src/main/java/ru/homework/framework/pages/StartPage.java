@@ -9,9 +9,6 @@ public class StartPage extends BasePage {
     @FindBy(xpath = "//input[@placeholder='Поиск по сайту']")
     private WebElement search;
 
-
-
-
     public SearchPage searchAtStartPage() {
         search.click();
         search.sendKeys(getNameOfProduct() + "\n");

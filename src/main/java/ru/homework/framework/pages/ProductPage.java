@@ -66,7 +66,7 @@ public class ProductPage extends BasePage {
     private WebElement checkCartPrice;
 
     public ProductPage checkCart() {
-        waitChahgeText(checkCartPrice);
+        waitChangeText(checkCartPrice);
         int sumOfProducts = Product.listOfProducts.get(1).getPrice() + Product.listOfProducts.get(2).getPrice();
         Assert.assertEquals("Цена корзины не совпадает с суммой покупок", stringPriceToInt(checkCartPrice), sumOfProducts);
         return this;
@@ -79,10 +79,5 @@ public class ProductPage extends BasePage {
         clickCart.click();
         return app.getCartPage();
     }
-
-
-
-
-
 
 }

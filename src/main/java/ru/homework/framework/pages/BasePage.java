@@ -1,6 +1,5 @@
 package ru.homework.framework.pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -43,7 +42,7 @@ public class BasePage {
                 String.valueOf(Product.listOfProducts.get(0).getPrice()))));
     }
 
-    public void waitChahgeText(WebElement element) {
+    public void waitChangeText(WebElement element) {
         String str = element.getText();
         wait.until(ExpectedConditions.not(ExpectedConditions.textToBePresentInElement(element, str)));
     }
@@ -52,11 +51,4 @@ public class BasePage {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-
-
-
-
-    public WebDriverWait getWait() {
-        return wait;
-    }
 }

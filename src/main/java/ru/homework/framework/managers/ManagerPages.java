@@ -1,7 +1,6 @@
 package ru.homework.framework.managers;
 
 import ru.homework.framework.pages.*;
-import ru.homework.framework.product.Product;
 
 public class ManagerPages {
     private static ManagerPages managerPages;
@@ -26,13 +25,6 @@ public class ManagerPages {
             managerPages = new ManagerPages();
         }
         return managerPages;
-    }
-
-    public BasePage getBasePage() {
-        if (basePage == null) {
-            basePage = new BasePage();
-        }
-        return basePage;
     }
 
     public SearchPage getSearchPage() {
